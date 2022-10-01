@@ -1362,25 +1362,4 @@ class PosePipePanel(Panel):
         
         
         
-_classes = [
-    Settings,
-    PosePipePanel,
-    RunOperator,
-    RunFileSelector,
-    SkeletonBuilder,
-    RetimeAnimation,
-]
 
-
-def register():
-    for c in _classes: register_class(c)
-    bpy.types.Scene.settings = bpy.props.PointerProperty(type=Settings)
-
-
-def unregister():
-    for c in _classes: unregister_class(c)
-    del bpy.types.Scene.settings
-
-
-if __name__ == "__main__":
-    register()
